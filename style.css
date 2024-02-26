@@ -1,0 +1,97 @@
+body {
+ // min-height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+  perspective: 800px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
+}
+
+#background-scroller {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, .15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
+  height: inherit;
+  transform: rotateX(40deg);
+  transform-origin: top center;
+  animation: 10s linear infinite crawlingWall;
+  background-position-y: top;
+}
+
+@keyframes crawlingWall {
+  to {
+    background-position-y: bottom;
+  }
+}
+
+.container{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  display: grid;
+  grid-template:
+    ". . ."
+    "SYNTH NEON SYNTH"
+    "DTT . ." ;
+}
+
+.neon{
+  grid-area: SYNTH;
+  font-family: 'Monoton', cursive;
+  font-size:5vW;
+  color: #FFD5FF;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+}
+
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		//text-shadow: none;
+    opacity: .99;
+
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+
+.numanuma {
+  grid-area: NEON;
+  z-index: 2;
+  font-family: 'Mr Dafoe';
+  font-size: 12vW;
+  font-weight: 100;
+  color: #ff00f0;
+  filter: drop-shadow(0 0 22px #ff00f5);
+  line-height: 1;
+  transform: rotateZ(10deg) translate(20%, -90%);
+  transform-origin: center left;
+  opacity: 80%
+}
+
+.datetime{
+  grid-area: DTT;
+  font-size: 2vw;
+  transform: translate(-50%, 10%)
+}
