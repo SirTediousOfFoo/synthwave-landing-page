@@ -1,3 +1,4 @@
+
 body {
  // min-height: 100vh;
   background: black;
@@ -15,18 +16,20 @@ body {
   perspective: 800px;
   overflow: hidden;
   background-image: linear-gradient(to bottom, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
+  z-index: -1;
 }
 
 #background-scroller {
-  background-size: 60px 60px;
+  background-size: 150px 150px;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .15) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
   height: inherit;
-  transform: rotateX(40deg);
+  transform: rotateX(20deg);
   transform-origin: top center;
-  animation: 10s linear infinite crawlingWall;
+  animation: 30s linear infinite crawlingWall;
   background-position-y: top;
+  z-index: -1;
 }
 
 @keyframes crawlingWall {
@@ -35,23 +38,47 @@ body {
   }
 }
 
-.container{
+.contentnaier{
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 5%;
+  left: 10%;
+  width: 90%;
   display: grid;
-  grid-template:
-    ". . ."
-    "SYNTH NEON SYNTH"
-    "DTT . ." ;
+  grid-template-columns: 80%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    "SYNTH"
+    "DTT"
+  pointer-events: auto;
+  z-index: 1;
 }
 
+.container{
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+    "SYNTH  NEON "
+    "DTT  . "
+    "INF  . " ;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.content{
+  grid-area: DTT;
+  font-size: 1.4vw;
+}
+
+.header{ font-size: 1.7vw; }
 .neon{
   grid-area: SYNTH;
   font-family: 'Monoton', cursive;
   font-size:5vW;
   color: #FFD5FF;
-  transform: translate(-50%, -50%);
   font-weight: 400;
   letter-spacing: 8px;
   text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
@@ -78,20 +105,34 @@ body {
 
 .numanuma {
   grid-area: NEON;
-  z-index: 2;
+  z-index: -1;
   font-family: 'Mr Dafoe';
   font-size: 12vW;
   font-weight: 100;
-  color: #ff00f0;
-  filter: drop-shadow(0 0 22px #ff00f5);
+  color: #aa00f0;
+  filter: drop-shadow(0 0 22px #ffffff);
   line-height: 1;
-  transform: rotateZ(10deg) translate(20%, -90%);
-  transform-origin: center left;
+  transform: rotateZ(-10deg) translate(-200%, -50%);
+  transform-origin: center center;
   opacity: 80%
 }
 
 .datetime{
   grid-area: DTT;
   font-size: 2vw;
-  transform: translate(-50%, 10%)
+  font-family: 'Audiowide';
+}
+
+.infobubble{
+  grid-area: INF;
+  font-size: 2vw;
+  font-family: 'Audiowide';
+  font-weight: 50;
+  filter: drop-shadow(0 0 22px #ff00aa);
+  opacity: 80%
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
