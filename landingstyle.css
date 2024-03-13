@@ -1,5 +1,4 @@
 body {
- // min-height: 100vh;
   background: black;
   color: white;
   display: flex;
@@ -13,9 +12,10 @@ body {
   height: 100vh;
   width: 100vw;
   perspective: 800px;
-  overflow: hidden;
   background-image: linear-gradient(to bottom, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
   z-index: -1;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #background-scroller {
@@ -61,35 +61,40 @@ body {
   text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
 }
 /* Mobile Device */
-@media only screen and (max-width: 767px) {
+@media screen and (min-width: 0px) and (max-width: 767px){
   .neon {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .datetime{
-    font-size: 22px;
+    font-size: 26px;
   }
   .infobubble {
-    font-size: 22px;
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 26px;
   }
 }
 
 /* Medium Device */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .neon {
-    font-size: 42px;
+    font-size: 40px;
   }
-
+  h3 {
+    font-size: 32px;
+  }
   .datetime{
-    font-size: 22px;
+    font-size: 32px;
   }
   .infobubble {
-    font-size: 22px;
+    font-size: 32px;
   }
 }
 
 /* Large Device */
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .neon {
     font-size:5vW;
   }
@@ -112,7 +117,6 @@ body {
 
 @keyframes flicker {
 	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-		//text-shadow: none;
     opacity: .99;
 
 	}
@@ -151,4 +155,18 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+footer {
+  width:95%;
+  position:absolute;
+  bottom:0%;
+  left:5%;
+  clear: both;
+}
+
+footer #gif {
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }

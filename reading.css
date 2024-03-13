@@ -7,6 +7,14 @@ body {
   justify-content: center;
   margin: 0;
 }
+table {
+  border-collapse: collapse;
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.8vw;
+}
 
 #background {
   overflow-x: hidden;
@@ -194,4 +202,18 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+/* Width dependent table font size */
+@media (max-width: 600px) {
+  table {
+    font-size: 18px; /* Adjust the font size for mobile devices */
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  table {
+    font-size: 22px; /* Adjust the font size for mid-sized devices */
+    width: 80%;
+  }
 }
