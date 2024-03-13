@@ -65,6 +65,7 @@ body {
     "INF  . ";
   pointer-events: auto;
   z-index: 1;
+  height: inherit;
 }
 
 .box {
@@ -83,6 +84,7 @@ body {
 
 #content {
   grid-area: CONTENT;
+  overflow: scroll;
 }
 
 /* Normal devices */
