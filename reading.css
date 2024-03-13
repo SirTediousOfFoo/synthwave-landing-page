@@ -9,10 +9,11 @@ body {
 }
 
 #background {
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 100vh;
   width: 100vw;
   perspective: 800px;
-  overflow: hidden;
   background-image: linear-gradient(to bottom, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
   z-index: -1;
 }
@@ -22,7 +23,7 @@ body {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .15) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
-  height: inherit;
+  height: 100vh;
   transform: rotateX(20deg);
   transform-origin: top center;
   animation: 30s linear infinite crawlingWall;
@@ -87,21 +88,32 @@ body {
 /* Normal devices */
 .content {
   grid-area: DTT;
-  font-size: 1.4vw;
+  font-size: 1.7vw;
 }
 
 .header {
-  font-size: 1.7vw;
+  font-size: 1.9vw;
 }
 
 /* Mobile devices */
 @media (max-width: 600px) {
   .content {
-    font-size: 16px; /* Adjust the minimum font size for mobile devices */
+    font-size: 18px; /* Adjust the minimum font size for mobile devices */
   }
 
   .header {
-    font-size: 18px; /* Adjust the minimum font size for mobile devices */
+    font-size: 20px; /* Adjust the minimum font size for mobile devices */
+  }
+}
+
+/* Mid-sized devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .content {
+    font-size: 22px; /* Adjust the font size for mid-sized devices */
+  }
+
+  .header {
+    font-size: 24px; /* Adjust the font size for mid-sized devices */
   }
 }
 
