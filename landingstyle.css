@@ -28,8 +28,12 @@ body {
     #e03168
   );
   z-index: -1;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
 }
 
 #background-scroller {
@@ -134,6 +138,7 @@ body {
   font-weight: 50;
   filter: drop-shadow(0 0 22px #ff00aa);
   opacity: 80%;
+  width: fit-content;
 }
 
 a {
@@ -143,7 +148,7 @@ a {
 
 footer {
   width: 95%;
-  position: absolute;
+  position: fixed;
   -webkit-position: absolute; /* Added -webkit prefix */
   bottom: 0%;
   left: 5%;
