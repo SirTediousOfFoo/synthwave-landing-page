@@ -21,20 +21,34 @@ table {
   height: 100vh;
   width: 100vw;
   perspective: 800px;
-  background-image: linear-gradient(to bottom, #0f0209, #23061d, #330531, #3e024b, #41056a, #520578, #640385, #770092, #9b0089, #b8007e, #ce1173, #e03168);
+  background-image: linear-gradient(
+    to bottom,
+    #0f0209,
+    #23061d,
+    #200533,
+    #3e028b,
+    #4105aa,
+    #5205b8,
+    #6403c5,
+    #7700d2,
+    #9b00c9
+  );
   z-index: -1;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 #background-scroller {
   background-size: 150px 150px;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, .15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
   height: 100vh;
   transform: rotateX(20deg);
   transform-origin: top center;
@@ -121,8 +135,8 @@ table {
   }
 
   footer {
-	visibility: hidden;
-}
+    visibility: hidden;
+  }
 }
 
 /* Mid-sized devices */
@@ -138,12 +152,14 @@ table {
 
 .neon {
   grid-area: SYNTH;
-  font-family: 'Monoton', cursive;
-  font-size: 5vW;
-  color: #FFD5FF;
+  font-family: "Monoton", cursive;
+  font-size: 5vw;
+  color: #ffd5ff;
   font-weight: 400;
   letter-spacing: 8px;
-  text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA, 40px 0vw 200px #D42CCA;
+  text-shadow: 1px 0px 4px #ffd5ff, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff,
+    2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px,
+    20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
 }
 
 .flicker-slow {
@@ -155,7 +171,6 @@ table {
 }
 
 @keyframes flicker {
-
   0%,
   19.999%,
   22%,
@@ -165,8 +180,7 @@ table {
   70%,
   100% {
     //text-shadow: none;
-    opacity: .99;
-
+    opacity: 0.99;
   }
 
   20%,
@@ -182,30 +196,30 @@ table {
 .numanuma {
   grid-area: NEON;
   z-index: -1;
-  font-family: 'Mr Dafoe';
-  font-size: 12vW;
+  font-family: "Mr Dafoe";
+  font-size: 12vw;
   font-weight: 100;
   color: #aa00f0;
   filter: drop-shadow(0 0 22px #ffffff);
   line-height: 1;
   transform: rotateZ(-10deg) translate(-200%, -50%);
   transform-origin: center center;
-  opacity: 80%
+  opacity: 80%;
 }
 
 .datetime {
   grid-area: DTT;
   font-size: 2vw;
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
 }
 
 .infobubble {
   grid-area: INF;
   font-size: 2vw;
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
   font-weight: 50;
   filter: drop-shadow(0 0 22px #ff00aa);
-  opacity: 80%
+  opacity: 80%;
 }
 
 a {
