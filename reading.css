@@ -21,6 +21,7 @@ table {
   height: 100vh;
   width: 100vw;
   perspective: 800px;
+  -webkit-perspective: 800px; /* Added -webkit prefix */
   background-image: linear-gradient(
     to bottom,
     #0f0209,

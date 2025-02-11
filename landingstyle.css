@@ -165,6 +165,7 @@ body {
   height: 100%;
   width: 100%;
   perspective: 800px;
+  -webkit-perspective: 800px; /* Added -webkit prefix */
   background-image: linear-gradient(
     to bottom,
     #0f0209,
