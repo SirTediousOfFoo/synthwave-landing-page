@@ -313,8 +313,33 @@ footer #gif {
   position: absolute;
   -webkit-position: absolute; /* Added -webkit prefix */
 }
+/* Smaller mobile Device */
+@media screen and (min-width: 0) and (max-width: 610px) {
+  .neon {
+    font-size: 36px;
+  }
+  .numanuma {
+    transform: rotateZ(-10deg) translate(-200%, 80%);
+    top: 16vw;
+  }
+  .datetime {
+    font-size: 26px;
+  }
+  .infobubble {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  footer #gif {
+    display: none;
+  }
+  .hidden {
+    display: none;
+  }
+}
 /* Mobile Device */
-@media screen and (min-width: 0px) and (max-width: 767px) {
+@media screen and (min-width: 611px) and (max-width: 767px) {
   .neon {
     font-size: 36px;
   }
@@ -334,11 +359,19 @@ footer #gif {
   footer #gif {
     display: none;
   }
+  .hidden {
+    display: none;
+  }
 }
 /* Medium Device */
 @media screen and (min-width: 768px) {
   .neon {
     font-size: 40px;
+  }
+  .numanuma {
+    transform: rotateZ(-10deg) translate(-220%, -30%);
+    top: 5vw;
+    left: -5vw;
   }
   h3 {
     font-size: 32px;
@@ -349,6 +382,9 @@ footer #gif {
   .infobubble {
     font-size: 32px;
   }
+  .hidden {
+    display: none;
+  }
 }
 
 /* Large Device */
@@ -356,12 +392,19 @@ footer #gif {
   .neon {
     font-size: 5vw;
   }
-
+  .numanuma {
+    transform: rotateZ(-10deg) translate(-200%, -50%);
+    top: unset;
+    left: unset;
+  }
   .datetime {
     font-size: 2.2vw;
   }
   .infobubble {
     font-size: 2.2vw;
+  }
+  .hidden {
+    display: unset;
   }
 }
 
