@@ -34,13 +34,6 @@ body {
   bottom: 0;
 }
 
-/** Safari background hack */
-@media not all and (min-resolution: 0.001dpcm) {
-  #background {
-    overflow: initial;
-  }
-}
-
 #background-scroller {
   background-size: 60px 60px;
   background-image: linear-gradient(

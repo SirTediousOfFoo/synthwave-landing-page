@@ -20,6 +20,26 @@
 </head>
 <body>
 <meta name="viewport" content="width=device-width">
+  <script>
+  //I hate both myself and Apple for forcing me to place this filth in my pure HRML but here we are
+  // Check the user agent
+  var userAgent = navigator.userAgent.toLowerCase();
+
+  // Get the element with ID 'background'
+  var backgroundElement = document.getElementById('background');
+
+  // Function to set CSS property based on user agent
+  function setCSSProperty() {
+
+      if (userAgent.indexOf('safari') > -1) {
+          // If the browser is Safari
+          backgroundElement.style.overflow = 'initial';
+  }
+  }
+
+  // Call the function to set the CSS property
+  setCSSProperty();
+</script>
 
   <span id="background">
   <div id="background-scroller"></div>
