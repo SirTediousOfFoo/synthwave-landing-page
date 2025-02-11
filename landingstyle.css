@@ -318,7 +318,10 @@ footer #gif {
   .neon {
     font-size: 36px;
   }
-
+  .numanuma {
+    transform: rotateZ(-10deg) translate(-200%, 0%);
+    top: 6vw;
+  }
   .datetime {
     font-size: 26px;
   }
