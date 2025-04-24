@@ -16,3 +16,5 @@ jobs:
           echo "Copying code to home directory..."
           rsync -a --delete --exclude='.git' ./ /var/www/snc2024/
           echo "Code copied successfully."
+testetest
+
