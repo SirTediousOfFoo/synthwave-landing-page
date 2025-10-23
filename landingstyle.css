@@ -166,18 +166,18 @@ body {
   width: 100%;
   perspective: 800px;
   -webkit-perspective: 800px; /* Added -webkit prefix */
-  background-image: linear-gradient(
+background-image: linear-gradient(
     to bottom,
-    #0f0209,
-    #23061d,
-    #200533,
-    #3e028b,
-    #4105aa,
-    #5205b8,
-    #6403c5,
-    #7700d2,
-    #9b00c9
-  );
+    #020f02,
+    #062306,
+    #052005,
+    #023e02,
+    #054105,
+    #055205,
+    #036403,
+    #007700,
+    #009b00
+);
   z-index: -1;
   overflow: hidden;
   position: fixed;
@@ -191,22 +191,19 @@ body {
 #background-scroller {
   background-size: 60px 60px;
   background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.15) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    to left, rgba(0, 255, 40, 0.15) 2px, #f000 2px ),
+    linear-gradient(to bottom, rgba(4, 247, 30, 0.2) 2px, #f000 10px);
   height: inherit;
-  transform: rotateX(40deg);
-  transform-origin: top center;
+  transform: rotateX(-50deg);
+  transform-origin: bottom center;
   animation: 10s linear infinite crawlingWall;
-  background-position-y: top;
+  background-position-y: bottom;
   z-index: -1;
 }
 
 @keyframes crawlingWall {
   to {
-    background-position-y: bottom;
+    background-position-y: top;
   }
 }
 
@@ -228,12 +225,10 @@ body {
 .neon {
   grid-area: SYNTH;
   font-family: "Monoton", cursive;
-  color: #66eef7;
+  color: #ffe300;
   font-weight: 400;
   letter-spacing: 8px;
-  text-shadow: 1px 0px 4px #5cb8bd, 2px 0px 4px #5cb8bd, 3px 0px 4px #5cb8bd,
-    2px 0px 3px #eab1ff, 2px 3px 15px #eab1ff, 2px 0px 15px, 5px 0px 125px,
-    20px 0vw 200px #eab1ff, 40px 0vw 200px #eab1ff;
+  text-shadow: 1px 0px 4px #cea556, 2px 0px 4px #cea556, 3px 0px 4px #cea556, 2px 0px 3px #d5867d, 2px 3px 15px #d5867d, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d5867d, 40px 0vw 200px #d5867d;
 }
 
 .flicker-slow {
@@ -272,7 +267,7 @@ body {
   font-family: "Mr Dafoe";
   font-size: 12vw;
   font-weight: 100;
-  color: yellow;
+  color: #ff00ef;
   filter: drop-shadow(0 0 22px #ffffff);
   line-height: 1;
   transform: rotateZ(-10deg) translate(-200%, -50%);
