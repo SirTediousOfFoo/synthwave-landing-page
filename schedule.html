@@ -21,7 +21,10 @@
   />
 
   <meta property="og:url" content="https://steelnchill.com/schedule.html" />
-  <meta property="og:image" content="https://steelnchill.com/pngs/hemakun.png" />
+  <meta
+    property="og:image"
+    content="https://steelnchill.com/pngs/hemakun.png"
+  />
   <meta property="og:title" content="Schedule and Chill 2026" />
   <meta
     property="og:description"
@@ -31,86 +34,231 @@
   <link rel="icon" type="image/x-icon" href="./favicon.png" />
 </head>
 <body>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width" />
 
   <div>
-      <div class="container">
-        <div class="header">
-          <h1>Tournament schedule</h1>
-          <p>Note: prone to slight delays(HEMA standard time)</p>
+    <div class="container">
+      <div class="header">
+        <h1>Tournament schedule</h1>
+        <p>Note: prone to slight delays(HEMA standard time)</p>
+      </div>
+      <div class="content">
+        <style>
+          .schedule-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+          }
 
-        </div>
-        <div class="content">
-          <style>
-            table {
-              border-collapse: collapse;
-              border: 1px solid #ddd; /* Add outer border */
-              width: 100%;
-            }
+          .schedule-column {
+            flex: 1;
+            min-width: 300px;
+          }
 
+          table {
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            width: 100%;
+          }
+
+          th,
+          td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.5vw;
+          }
+
+          th {
+            background-color: #f2f2f2;
+            color: black;
+          }
+
+          @media (max-width: 600px) {
             th,
             td {
-              padding: 8px;
-              text-align: left;
-              border-bottom: 1px solid #ddd;
-              font-size: 1.5vw;
+              font-size: 18px;
             }
+            .schedule-container {
+              flex-direction: column;
+            }
+          }
 
-            th {
-              background-color: #f2f2f2;
-              color: black;
+          @media (min-width: 601px) and (max-width: 1024px) {
+            th,
+            td {
+              font-size: 22px;
             }
+          }
+        </style>
 
-            @media (max-width: 600px) {
-              th, td {
-                font-size: 18px; /* Adjust the font size for mobile devices */
-              }
+        <!-- pulse glow effect for evening div -->
+        <style>
+          .pulse {
+            animation: pulse 1.5s ease-in-out infinite;
+          }
+          @keyframes pulse {
+            0% {
+              box-shadow: 0 0 5px #ff00ff;
             }
+            50% {
+              box-shadow: 0 0 20px #ff00ff;
+            }
+            100% {
+              box-shadow: 0 0 5px #ff00ff;
+            }
+          }
+        </style>
 
-            @media (min-width: 601px) and (max-width: 1024px) {
-              th, td {
-                font-size: 22px; /* Adjust the font size for mid-sized devices */
-              }
-            }
-          </style>
-          <table>
-            <thead>
-              <tr>
-                <th>Day</th>
-                <th>Time</th>
-                <th>Event</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td rowspan="10">Day 1</td><td>07:00</td><td>Registrations and gear-check</td></tr>
-              <tr><td>08:00</td><td>Open sidesword pools start</td></tr>
-              <tr><td>09:30</td><td>Open sidesword eliminations start</td></tr>
-              <tr><td>10:00</td><td>Open sword &amp; buckler pools start</td></tr>
-              <tr><td>11:30</td><td>Open sword &amp; buckler eliminations start</td></tr>
-              <tr><td>12:00</td><td>Lunch break</td></tr>
-              <tr><td>13:00</td><td>Open sidesword final matches</td></tr>
-              <tr><td>13:30</td><td>Open sword &amp; buckler final matches</td></tr>
-              <tr><td>14:00</td><td>Medal ceremony</td></tr>
-              <tr><td>20:00</td><td>Afterparty</td></tr>
-              <tr><td rowspan="12">Day 2</td><td>07:00</td><td>Registrations and gear-check</td></tr>
-              <tr><td>08:00</td><td>Women's longsword pools start</td></tr>
-              <tr><td>09:30</td><td>Women's longsword eliminations start</td></tr>
-              <tr><td>10:00</td><td>Open longsword pools start (first 4 pools)</td></tr>
-              <tr><td>11:30</td><td>Lunch break</td></tr>
-              <tr><td>12:30</td><td>Open longsword pools start (last 2 pools) &amp; Women's sidesword pools start</td></tr>
-              <tr><td>14:00</td><td>Open longsword eliminations start</td></tr>
-              <tr><td>14:30</td><td>Women's sidesword eliminations start</td></tr>
-              <tr><td>15:00</td><td>Women's sidesword final matches</td></tr>
-              <tr><td>15:30</td><td>Women's longsword final matches</td></tr>
-              <tr><td>16:00</td><td>Open longsword final matches</td></tr>
-              <tr><td>16:30</td><td>Medal ceremony</td></tr>
-            </tbody>
-          </table>
-          <p>Tournament schedule is an approximation and subject to change.</p>
+        <div class="schedule-container">
+          <div class="schedule-column">
+            <h3>Saturday</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>07:00</td>
+                  <td>Check-in & gear check</td>
+                </tr>
+                <tr>
+                  <td>08:00</td>
+                  <td>Open Sidesword pools</td>
+                </tr>
+                <tr>
+                  <td>09:30</td>
+                  <td>Open Sidesword eliminations</td>
+                </tr>
+                <tr>
+                  <td>10:30</td>
+                  <td>Sword & buckler pools</td>
+                </tr>
+                <tr>
+                  <td>12:00</td>
+                  <td>Sword & buckler eliminations</td>
+                </tr>
+                <tr>
+                  <td>13:00</td>
+                  <td>Lunch 🍲</td>
+                </tr>
+                <tr>
+                  <td>14:00</td>
+                  <td>Women's Sidesword pools</td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                  <td>Women's Sidesword eliminations</td>
+                </tr>
+                <tr>
+                  <td>16:30</td>
+                  <td>Open Sidesword finals</td>
+                </tr>
+                <tr>
+                  <td>17:00</td>
+                  <td>Sword & buckler finals</td>
+                </tr>
+                <tr>
+                  <td>17:30</td>
+                  <td>Women's Sidesword finals</td>
+                </tr>
+                <tr>
+                  <td>18:00</td>
+                  <td>Award ceremony</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Evening</h4>
+            <div
++              class="pulse"
+              style="
+                margin-top: 20px;
+                padding: 15px;
+                border: 2px solid #ff00ff;
+                background-color: rgba(255, 0, 255, 0.33);
+                border-radius: 8px;
+              "
+            >
+              <table style="border: none; background: none">
+                <tbody>
+                  <tr>
+                    <td style="border: none">20:00</td>
+                    <td style="border: none">Afterparty</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="schedule-column">
+            <h3>Sunday</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>07:00</td>
+                  <td>Check-in & gear check</td>
+                </tr>
+                <tr>
+                  <td>08:00</td>
+                  <td>Women's Longsword pools</td>
+                </tr>
+                <tr>
+                  <td>09:30</td>
+                  <td>Women's Longsword eliminations</td>
+                </tr>
+                <tr>
+                  <td>10:30</td>
+                  <td>Open Longsword pools - Tier B</td>
+                </tr>
+                <tr>
+                  <td>12:00</td>
+                  <td>Open Longsword eliminations - Tier B</td>
+                </tr>
+                <tr>
+                  <td>13:00</td>
+                  <td>Lunch 🍲</td>
+                </tr>
+                <tr>
+                  <td>14:00</td>
+                  <td>Open Longsword pools - Tier A</td>
+                </tr>
+                <tr>
+                  <td>15:30</td>
+                  <td>Open Longsword eliminations - Tier A</td>
+                </tr>
+                <tr>
+                  <td>16:30</td>
+                  <td>Women's Longsword finals</td>
+                </tr>
+                <tr>
+                  <td>17:00</td>
+                  <td>Open Longsword finals - Tier B</td>
+                </tr>
+                <tr>
+                  <td>17:30</td>
+                  <td>Open Longsword finals - Tier A</td>
+                </tr>
+                <tr>
+                  <td>18:00</td>
+                  <td>Award ceremony</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+        <p>Tournament schedule is an approximation and subject to change.</p>
       </div>
+    </div>
     <div id="background">
-
       <div id="background-scroller"></div>
     </div>
   </div>
